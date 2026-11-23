@@ -1,0 +1,14 @@
+<Project>
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Company>EpicMorg</Company>
+    <Authors>EpicMorg</Authors>
+    <Product>HammerShell</Product>
+    <Copyright>Copyright (c) 2026 EpicMorg</Copyright>
+    <!-- release builds override this from the tag (-p:Version=...) -->
+    <Version>0.1.0</Version>
+  </PropertyGroup>
+</Project>

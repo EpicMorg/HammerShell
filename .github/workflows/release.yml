@@ -1,0 +1,43 @@
+name: release
+
+# Push a tag like v0.1.0 to test, pack and publish HammerShell.Client to NuGet and create a GitHub release
+# (tags with a "-" suffix are marked as pre-release).
+# Needs the repository secret NUGET_API_KEY (an API key scoped to the HammerShell.Client package).
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: |
+            8.0.x
+            10.0.x
+      - name: Test
+        run: dotnet test --solution HammerShell.sln -c Release
+      - name: Pack
+        shell: pwsh
+        run: |
+          $version = "${{ github.ref_name }}".TrimStart("v")
+          dotnet pack src/HammerShell.Client/HammerShell.Client.csproj -c Release -p:Version=$version -o out
+      - name: Publish to NuGet
+        shell: pwsh
+        env:
+          NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
+        run: |
+          if (-not $env:NUGET_API_KEY) { throw "secret NUGET_API_KEY is not set" }
+          dotnet nuget push "out/*.nupkg" --api-key $env:NUGET_API_KEY --source https://api.nuget.org/v3/index.json --skip-duplicate
+      - name: GitHub release
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $extra = @(); if ("${{ github.ref_name }}".Contains("-")) { $extra += "--prerelease" }
+          gh release create "${{ github.ref_name }}" (Get-ChildItem out/*) --title "HammerShell ${{ github.ref_name }}" --notes-file CHANGELOG.md @extra
