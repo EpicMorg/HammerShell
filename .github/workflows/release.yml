@@ -2,8 +2,8 @@ name: release
 
 # Push a tag like v0.1.0 to test, pack and publish EpicMorg.HammerShell.Client to NuGet and create a GitHub release
 # (tags with a "-" suffix are marked as pre-release).
-# Publishing uses NuGet Trusted Publishing (policy of the nuget.org account EpicMorgDev for this repository and
-# release.yml): the job gets a short-lived API key through GitHub OIDC, no stored secret.
+# Publishing uses NuGet Trusted Publishing (policy created by the nuget.org user stam, owned by EpicMorgDev, for this
+# repository and release.yml): the job gets a short-lived API key through GitHub OIDC, no stored secret.
 on:
   push:
     tags: ["v*"]
@@ -34,7 +34,7 @@ jobs:
         id: nuget
         uses: NuGet/login@v1
         with:
-          user: EpicMorgDev
+          user: stam
       - name: Publish to NuGet
         shell: pwsh
         env:
