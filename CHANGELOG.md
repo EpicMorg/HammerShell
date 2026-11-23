@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.1.0] - unreleased
+## [0.1.0] - 2026-11-23
 
 First release: the shell channel client extracted from Hammer-MCP, package `EpicMorg.HammerShell.Client` (namespace `HammerShell.Client`).
 
