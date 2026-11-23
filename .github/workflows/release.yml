@@ -1,8 +1,8 @@
 name: release
 
-# Push a tag like v0.1.0 to test, pack and publish HammerShell.Client to NuGet and create a GitHub release
+# Push a tag like v0.1.0 to test, pack and publish EpicMorg.HammerShell.Client to NuGet and create a GitHub release
 # (tags with a "-" suffix are marked as pre-release).
-# Needs the repository secret NUGET_API_KEY (an API key scoped to the HammerShell.Client package).
+# Needs the repository secret NUGET_API_KEY (an API key scoped to the EpicMorg.HammerShell.Client package).
 on:
   push:
     tags: ["v*"]
