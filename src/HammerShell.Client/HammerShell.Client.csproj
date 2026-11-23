@@ -6,7 +6,7 @@
     <!-- public members without XML docs are fine; everything else stays an error -->
     <NoWarn>$(NoWarn);CS1591</NoWarn>
 
-    <PackageId>HammerShell.Client</PackageId>
+    <PackageId>EpicMorg.HammerShell.Client</PackageId>
     <Description>Client for the shell channel of Valve Hammer Editor (Source 1): send entity and AI node edit commands to the map open in a running Hammer (Worldcraft_ShellMessageWnd / WM_COPYDATA, the mechanism behind editor_sendcommand in the Source SDK). Windows only.</Description>
     <PackageTags>hammer;valve;source-engine;source-sdk;level-editor;mapping;vmf;worldcraft</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>

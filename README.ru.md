@@ -16,7 +16,7 @@
 ## Установка
 
 ```sh
-dotnet add package HammerShell.Client
+dotnet add package EpicMorg.HammerShell.Client
 ```
 
 ## Использование

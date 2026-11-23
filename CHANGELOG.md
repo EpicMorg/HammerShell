@@ -2,7 +2,7 @@
 
 ## [0.1.0] - unreleased
 
-First release: the shell channel client extracted from Hammer-MCP.
+First release: the shell channel client extracted from Hammer-MCP, package `EpicMorg.HammerShell.Client` (namespace `HammerShell.Client`).
 
 - `ShellChannel`: finds `Worldcraft_ShellMessageWnd` (or a window you pass) and sends one command over
   `WM_COPYDATA` in the system ANSI code page; `Ok` / `Rejected` / `NotRunning`.

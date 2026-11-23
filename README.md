@@ -16,7 +16,7 @@ Windows only; .NET 8 and .NET 10.
 ## Install
 
 ```sh
-dotnet add package HammerShell.Client
+dotnet add package EpicMorg.HammerShell.Client
 ```
 
 ## Use
