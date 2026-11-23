@@ -56,7 +56,7 @@ Creating, deleting and rotating entities can be undone in Hammer; keyvalue chang
 and which Hammer builds have the channel (every stock Source 1 Hammer, Hammer++ 8867+, Source Level Editor, Slammin'
 Hammer, Black Mesa — not Strata, Source 2 or GoldSrc editors):
 
-- [Shell channel reference](https://github.com/EpicMorg/Hammer-MCP/blob/master/docs/shell-channel.md)
+- [Shell channel reference](https://github.com/EpicMorg/HammerShell/blob/master/docs/shell-channel.md) (this repository)
 - [Editor support matrix](https://github.com/EpicMorg/Hammer-MCP/blob/master/docs/editors.md)
 
 The sender must run at the same or a higher Windows integrity level as Hammer (UIPI).
