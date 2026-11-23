@@ -56,7 +56,7 @@ if (session.Send(ShellCommands.EntityCreate("info_target", at)) == ShellResult.O
 есть канал (все стоковые Hammer для Source 1, Hammer++ 8867+, Source Level Editor, Slammin' Hammer, Black Mesa — но не
 Strata, Source 2 и редакторы GoldSrc):
 
-- [Справочник по shell-каналу](https://github.com/EpicMorg/Hammer-MCP/blob/master/docs/shell-channel.ru.md)
+- [Справочник по shell-каналу](https://github.com/EpicMorg/HammerShell/blob/master/docs/shell-channel.ru.md) (в этом репозитории)
 - [Таблица поддержки редакторов](https://github.com/EpicMorg/Hammer-MCP/blob/master/docs/editors.ru.md)
 
 Отправитель должен работать с тем же или более высоким уровнем целостности Windows, что и Hammer (UIPI).

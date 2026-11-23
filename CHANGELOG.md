@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.1.0] - unreleased
+## [0.1.0] - 2026-11-23
 
 First release: the shell channel client extracted from Hammer-MCP, package `EpicMorg.HammerShell.Client` (namespace `HammerShell.Client`).
 
@@ -10,3 +10,4 @@ First release: the shell channel client extracted from Hammer-MCP, package `Epic
 - `ShellCommands`: every command of the Source SDK sender, numbers with a decimal point in any culture, double quotes
   in keyvalues refused.
 - Targets .NET 8 and .NET 10, Windows only.
+- `docs/shell-channel.md` (EN / RU): the shell channel reference, moved here from Hammer-MCP.
